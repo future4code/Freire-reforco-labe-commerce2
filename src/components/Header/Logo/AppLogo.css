@@ -1,0 +1,93 @@
+:root {
+  --cor-1: #11151c;
+  --cor-2: #212d40;
+  --cor-3: #364156;
+  --cor-4: #7d4e57;
+  --cor-5: #d66853;
+  --cor-6: #edf2f4;
+  --cor-7: #acb3ba;
+
+  --sombra-cor: rgba(0, 0, 0, 0.5);
+
+  --borda-1: 10px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  max-width: 220px;
+  min-width: 220px;
+  height: 100%;
+}
+
+.header-logo > svg {
+  font-size: 40px;
+}
+
+.header-logo > .header-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  height: 100%;
+}
+
+.header-logo > .header-texts > h1 {
+  font-size: 28px;
+  font-weight: bold;
+
+  height: 40px;
+
+  margin-top: -8px;
+}
+
+.header-logo > .header-texts > h5 {
+  font-size: 14px;
+  font-weight: bold;
+
+  margin-bottom: -5px;
+}
+
+/***************************/
+/*     RESPONSIVENESS      */
+/***************************/
+
+@media screen and (max-width: 479px) {
+  .header-logo {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    padding-top: 5px;
+  }
+
+  .header-logo > svg {
+    font-size: 45px;
+  }
+
+  .header-logo > .header-texts > h1 {
+    font-size: 26px;
+    font-weight: bold;
+
+    height: 40px;
+
+    margin-top: -5px;
+  }
+
+  .header-logo > .header-texts > h5 {
+    font-size: 13px;
+    font-weight: bold;
+
+    margin: -7px 0;
+  }
+}

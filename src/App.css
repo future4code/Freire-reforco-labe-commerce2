@@ -1,38 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+:root {
+  --cor-1: #11151C;
+  --cor-2: #212D40;
+  --cor-3: #364156;
+  --cor-4: #7D4E57;
+  --cor-5: #D66853;
+  --cor-6: #EDF2F4;
+  --cor-7: #acb3ba;
+
+  --sombra-cor: rgba(0, 0, 0, 0.500);
+
+  --borda-1: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
 .App {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  padding: 90px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
   text-align: center;
+
+  background-color: var(--cor-1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/***************************/
+/*         HEADER          */
+/***************************/
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  width: 100%;
+  height: 70px;
+
+  padding: 0 10px;
+
+  position: fixed;
+  top: 0;
+
+  background-color: var(--cor-1);
+  color: var(--cor-6);
+
+  box-shadow: 0px 0px 5px 0px var(--sombra-cor);
+}
+
+/***************************/
+/*          BODY           */
+/***************************/
+
+.App-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  width: 100%;
+  height: fit-content;
+  min-height: 100px;
+
+  background-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+/***************************/
+/*         FOOTER          */
+/***************************/
+
+.App-footer {
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: fit-content;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/***************************/
+/*     RESPONSIVENESS      */
+/***************************/
+  
+@media screen and (max-width: 479px) {
+  .App-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    column-gap: 0px;
+    height: 100px;  
+    padding: 0 15px;
+    padding-bottom: 3px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-body {
+    padding: 30px 0px;
   }
+}
+
+@media screen and (max-width: 719px) {
+
 }

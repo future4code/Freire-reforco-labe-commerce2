@@ -1,0 +1,213 @@
+:root {
+  --cor-1: #11151c;
+  --cor-2: #212d40;
+  --cor-3: #364156;
+  --cor-4: #7d4e57;
+  --cor-5: #d66853;
+  --cor-6: #edf2f4;
+  --cor-7: #acb3ba;
+
+  --sombra-cor: rgba(0, 0, 0, 0.5);
+
+  --borda-1: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: fit-content;
+  max-width: 250px;
+  min-width: 150px;
+
+  padding: 20px;
+
+  border-radius: var(--borda-1);
+
+  background-color: purple;
+  color: var(--cor-6);
+
+  box-shadow: 0px 0px 10px var(--sombra-cor);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card > .card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: fit-content;
+
+  padding: 5px;
+  margin-bottom: 10px;
+
+  background-color: #14b5d9;
+
+  border-radius: var(--borda-1);
+
+  box-shadow: 0px 0px 10px var(--sombra-cor);
+}
+
+.card > .card-img > img {
+  width: fit-content;
+  height: 140px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card > .card-img > img:hover {
+  transform: scale(1.3);
+}
+
+.card > .card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: fit-content;
+}
+
+.card > .card-text > h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card > .card-text > h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+.card > button {
+  width: 80%;
+  height: 50px;
+
+  font-size: 1.2em;
+  font-weight: bold;
+
+  color: var(--cor-1);
+
+  background-color: palevioletred;
+
+  outline: none;
+  border: none;
+
+  border-radius: var(--borda-1);
+
+  box-shadow: 0px 0px 5px var(--sombra-cor);
+
+  transition: all 0.25s ease-in-out;
+}
+
+.card > button:hover {
+  color: var(--cor-6);
+  background-color: var(--cor-4);
+}
+
+.card > button:active {
+  transform: scale(0.95);
+}
+
+/***************************/
+/*     RESPONSIVENESS      */
+/***************************/
+
+@media screen and (min-width: 640px) and (max-width: 840px) {
+  .card {
+    padding: 12px;
+  }
+
+  .card > .card-text > h1 {
+    font-size: 2.1rem;
+  }
+
+  .card > button {
+    width: 90%;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 385px) and (max-width: 639px) {
+  .card {
+    width: 175px;
+    padding: 8px 10px;
+  }
+
+  .card > .card-img > img {
+    height: 100px;
+  }
+
+  .card > .card-text > h3 {
+    font-size: 0.9rem;
+  }
+
+  .card > .card-text > h1 {
+    font-size: 1.8rem;
+  }
+
+  .card > button {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .card:hover {
+    transform: scale(1);
+  }
+
+  .card > .card-img {
+    width: 30%;
+    padding: 5px;
+  }
+
+  .card > .card-img > img {
+    height: 60px;
+  }
+
+  .card > .card-text {
+    width: 60%;
+    padding: 5px;
+  }
+
+  .card > .card-text > h3 {
+    font-size: 0.9rem;
+  }
+
+  .card > .card-text > h1 {
+    font-size: 1.9rem;
+  }
+
+  .card > button {
+    width: 95%;
+    height: 35px;
+  }
+
+  .card > button:hover {
+    color: var(--cor-1);
+    background-color: var(--cor-5);
+  }
+}

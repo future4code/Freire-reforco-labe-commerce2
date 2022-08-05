@@ -1,0 +1,341 @@
+:root {
+    --cor-1: #11151C;
+    --cor-2: #212D40;
+    --cor-3: #364156;
+    --cor-4: #7D4E57;
+    --cor-5: #D66853;
+    --cor-6: #EDF2F4;
+    --cor-7: #acb3ba;
+  
+    --sombra-cor: rgba(0, 0, 0, 0.500);
+  
+    --borda-1: 10px;
+}
+
+.App-modal-itemCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+
+    width: 100%;
+    height: fit-content;
+
+    padding: 5px 10px;
+
+    border-bottom: solid 3px var(--cor-4);
+}
+
+.App-modal-itemCart > .modal-itemCart-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 15px;
+
+    width: 70%;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-trash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    padding: 15px 5px;
+    margin-right: -10px;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    color: var(--cor-4);
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > img { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: fit-content;
+    height: 65px;
+  
+    padding: 5px;
+  
+    background-color: var(--cor-3);
+  
+    border-radius: var(--borda-1);
+  
+    box-shadow: 0px 0px 10px var(--sombra-cor);
+}
+  
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: -5px;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-name {
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+
+    font-size: 20px;
+
+    color: var(--cor-6);
+
+    width:100%;
+    height: 30px;
+
+    padding: 0;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount > .cart-item-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 35px;
+
+    padding: 3px 0;
+    padding-left: 3px;
+
+    color: var(--cor-2);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: var(--cor-6);
+
+    border-radius: var(--borda-1);
+    border: none;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount > .cart-item-amount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+
+    width: 75px;
+    height: 35px;
+
+    padding: 3px;
+
+    color: var(--cor-2);
+
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: var(--cor-6);
+
+    border-radius: var(--borda-1);
+    border: none;
+}
+
+.App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount > .cart-item-amount >button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    
+    font-size: 20px;
+
+    color: var(--cor-2);
+
+    background-color: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.App-modal-itemCart > .cart-item-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 40%;
+    height: 70px;
+
+    padding-bottom: 3px;
+}
+
+.App-modal-itemCart > .cart-item-price > h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    font-size: 12px;
+
+    width: 100%;
+    height: 30px;
+
+    padding-top: 5px;
+    padding-right: 3px;
+    
+    text-align: left;
+
+    color: var(--cor-7);
+}
+
+.App-modal-itemCart > .cart-item-price > h1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    font-size: 35px;
+
+    width: 100%;
+    height: 40px;
+
+    padding-bottom: 10px;
+    margin-bottom: -5px;
+
+    text-align: left;
+
+    color: var(--cor-6);
+}
+
+/***************************/
+/*     RESPONSIVENESS      */
+/***************************/
+
+@media screen and (max-width: 540px) {
+    .App-modal-itemCart {
+        flex-direction: column;
+        padding-top: 12px;
+        height: 95px;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left {    
+        width: fit-content;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-trash {
+        position: absolute;
+        left: 2%;
+        
+        width: fit-content;
+        height: 75px;
+
+        margin-top: 67px;
+        padding: 0;
+
+        font-size: 40px;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > img { 
+        position: absolute;
+        left: 50px;
+
+        width: 60px;
+        height: 75px;
+
+        margin-top: 67px;
+    }
+      
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        width: fit-content;
+        margin-top: -5px;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-name {
+        position: absolute;
+        right: 2%;
+    
+        margin-top: 20px;
+    
+        width:fit-content;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount {
+        position: absolute;
+        left: 118px;
+
+        flex-direction: column;
+        gap: 7px;
+        
+        width: fit-content;
+        height: fit-content;
+
+        margin-top: 70px;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount > .cart-item-size {    
+        width: 60px;
+        height: 32px;
+    
+        padding: 3px;
+    
+        font-size: 16px;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount > .cart-item-amount {
+        column-gap: 3px;
+    
+        width: 60px;
+        height: 32px;
+    
+        font-size: 16px;
+    }
+    
+    .App-modal-itemCart > .modal-itemCart-left > .cart-item-infos > .cart-item-size-amount > .cart-item-amount >button {
+        font-size: 15px;
+    }
+    
+    .App-modal-itemCart > .cart-item-price {
+        position: absolute;
+        right: 2%;
+    
+        width: fit-content;
+        height: fit-content;
+
+        margin-top: 25px;
+    }
+    
+    .App-modal-itemCart > .cart-item-price > h3 {
+        margin-bottom: -15px;    
+        padding-top: 0px;
+        padding-right: 0px;
+    }
+    
+    .App-modal-itemCart > .cart-item-price > h1 {
+        font-size: 30px;
+    
+        width: 100%;
+    
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+}
