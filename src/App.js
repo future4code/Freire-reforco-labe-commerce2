@@ -17,37 +17,37 @@ function App() {
     key: 1,
     name: 'Produto 1',
     price: 150,
-    img: 'https://picsum.photos/200/300/?1',
+    img: 'https://picsum.photos/200/200/?1',
     description: 'Descrição do produto 1'
   }, {
     key: 2,
     name: 'Produto 2',
     price: 250.30,
-    img: 'https://picsum.photos/200/300/?2',
+    img: 'https://picsum.photos/200/200/?2',
     description: 'Descrição do produto 2'
   }, {
     key: 3,
     name: 'Produto 3',
     price: 350.50,
-    img: 'https://picsum.photos/200/300/?3',
+    img: 'https://picsum.photos/200/200/?3',
     description: 'Descrição do produto 3'
   }, {
     key: 4,
     name: 'Produto 4',
     price: 450.70,
-    img: 'https://picsum.photos/200/300/?4',
+    img: 'https://picsum.photos/200/200/?4',
     description: 'Descrição do produto 4'
   }, {
     key: 5,
     name: 'Produto 5',
     price: 550.90,
-    img: 'https://picsum.photos/200/300/?5',
+    img: 'https://picsum.photos/200/200/?5',
     description: 'Descrição do produto 5'
   }, {
     key: 6,
     name: 'Produto 6',
     price: 650.00,
-    img: 'https://picsum.photos/200/300/?6',
+    img: 'https://picsum.photos/200/200/?6',
     description: 'Descrição do produto 6'
   }]);
 

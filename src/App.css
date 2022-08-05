@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
 :root {
-  --cor-1: #11151C;
-  --cor-2: #212D40;
-  --cor-3: #364156;
-  --cor-4: #7D4E57;
-  --cor-5: #D66853;
-  --cor-6: #EDF2F4;
-  --cor-7: #acb3ba;
+  --cor-1: #11151c;
+  --cor-2: #212d40;
+  --cor-3: #db7093;
+  --cor-4: #0487D9;
+  --cor-5: #2A678C;
+  --cor-6: #73B2D9;
+  --cor-7: #2CBF96;
 
   --sombra-cor: rgba(0, 0, 0, 0.500);
 
@@ -36,7 +36,7 @@
   
   text-align: center;
 
-  background-color: var(--cor-1);
+  background-color: var(--cor-6);
 }
 
 /***************************/
@@ -52,7 +52,7 @@
   column-gap: 10px;
 
   width: 100%;
-  height: 70px;
+  height: 90px;
 
   padding: 0 10px;
 
@@ -60,7 +60,7 @@
   top: 0;
 
   background-color: var(--cor-1);
-  color: var(--cor-6);
+  color: var(--cor-4);
 
   box-shadow: 0px 0px 5px 0px var(--sombra-cor);
 }
