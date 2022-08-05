@@ -1,0 +1,291 @@
+:root {
+    --cor-1: #11151C;
+    --cor-2: #212D40;
+    --cor-3: #364156;
+    --cor-4: #7D4E57;
+    --cor-5: #D66853;
+    --cor-6: #EDF2F4;
+    --cor-7: #acb3ba;
+  
+    --sombra-cor: rgba(0, 0, 0, 0.500);
+  
+    --borda-1: 10px;
+}
+
+.App-ShoppingCart {
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 82px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.App-ShoppingCart > #ShoppingCart-trigger {
+    z-index: 15;
+    
+    cursor: pointer;
+    appearance: none;
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+}
+
+.App-ShoppingCart > #ShoppingCart-trigger:checked ~ .Modal-ShoppingCart {
+    top: 0;
+}
+
+.App-ShoppingCart > .Navbar-ShoppingCart {
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--cor-1);
+
+    box-shadow: 0px 0px 10px var(--sombra-cor);
+}
+
+/**********************************/
+/**********************************/
+/*      TEXTO DO PREÇO TOTAL      */
+/**********************************/
+/**********************************/
+
+.App-ShoppingCart > .Navbar-ShoppingCart > .cart-price-total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 10px;
+  
+    font-size: 18px;
+    font-weight: bold;
+
+    color: var(--cor-6);
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.App-ShoppingCart > .Navbar-ShoppingCart > .cart-price-total > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 12px;
+
+    font-size: 18px;
+}
+
+.App-ShoppingCart > .Navbar-ShoppingCart > .cart-price-total > h1 {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    margin-top: -16px;
+
+    font-size: 45px;
+}
+
+/***************************************/
+/***************************************/
+/*   BOTÃO COM A QUANTIDADE DE ITENS   */
+/***************************************/
+/***************************************/
+
+.App-ShoppingCart > .Navbar-ShoppingCart > .btn-finish-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100%;
+
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 115%;
+
+    border-radius: var(--borda-1) 0 0 var(--borda-1);
+    border: none;
+
+    outline: none;
+
+    color: var(--cor-6);
+
+    background-color: var(--cor-5);
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.App-ShoppingCart > .Navbar-ShoppingCart > .btn-finish-buy > .cart-icon-count {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: fit-content;
+    height: 100%;
+}   
+  
+.App-ShoppingCart > .Navbar-ShoppingCart > .btn-finish-buy > .cart-icon-count  > .cart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 50px;
+    height: 50px;
+
+    padding-left: 5px;
+
+    color: var(--cor-6);
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.App-ShoppingCart > .Navbar-ShoppingCart > .btn-finish-buy > .cart-icon-count  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: fit-content;
+    height: fit-content;
+  
+    font-size: 25px;
+
+    color: var(--cor-6);
+  
+    transition: all 0.3s ease-in-out;
+}
+
+/*********************************/
+/*********************************/
+/*   MODAL CARRINHO DE COMPRAS   */
+/*********************************/
+/*********************************/
+  
+.Modal-ShoppingCart {
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: fixed;
+    top: 100vh;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--cor-1);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.Modal-ShoppingCart > .Modal-ShoppingCart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+
+    width: 100%;
+    height: 70px;
+
+    padding: 12px;
+    margin-bottom: 5px;
+
+    background-color: var(--cor-1);
+    color: var(--cor-6);
+
+    box-shadow: 0px 0px 5px 0px var(--sombra-cor);
+}
+
+.Modal-ShoppingCart > .Modal-ShoppingCart-header > .Modal-ShoppingCart-clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    height: 100%;
+
+    padding: 0 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border-radius: var(--borda-1);
+    border: none;
+
+    outline: none;
+
+    color: var(--cor-6);
+
+    background-color: var(--cor-4);
+  
+    transition: all 0.15s ease-in-out;
+}
+
+.Modal-ShoppingCart > .Modal-ShoppingCart-header > .Modal-ShoppingCart-clear > .clear-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: -6px;
+    margin-left: 5px;
+
+    font-size: 28px;
+}
+
+.Modal-ShoppingCart > .Modal-ShoppingCart-header > .Modal-ShoppingCart-close {
+    position: absolute;
+    right: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    height: fit-content;
+    min-width: 45px;
+
+    padding: 5px;
+
+    font-size: 35px;
+
+    border-radius: var(--borda-1);
+    border: none;
+
+    outline: none;
+
+    color: var(--cor-6);
+
+    background-color: var(--cor-4);
+  
+    transition: all 0.15s ease-in-out;
+}
+
+.Modal-ShoppingCart > .Modal-ShoppingCart-header > .Modal-ShoppingCart-close > .close-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.Modal-ShoppingCart > .Modal-ShoppingCart-header > button:active {
+    transform: scale(0.95);
+}

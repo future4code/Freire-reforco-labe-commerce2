@@ -1,0 +1,62 @@
+:root {
+  --cor-1: #11151C;
+  --cor-2: #212D40;
+  --cor-3: #364156;
+  --cor-4: #7D4E57;
+  --cor-5: #D66853;
+  --cor-6: #EDF2F4;
+  --cor-7: #acb3ba;
+
+  --sombra-cor: rgba(0, 0, 0, 0.500);
+
+  --borda-1: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: 100%;
+  height: fit-content;
+
+  padding: 5px 25px;
+}
+
+/***************************/
+/*     RESPONSIVENESS      */
+/***************************/
+
+@media screen and (min-width: 640px) and (max-width: 839px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    column-gap: 15px;
+    row-gap: 20px;
+
+    padding: 5px 20px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 639px) {
+  .card-container {
+    gap: 15px;
+
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 15px;
+
+    padding: 0px 10px;
+  }
+}
