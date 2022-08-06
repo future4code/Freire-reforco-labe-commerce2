@@ -52,7 +52,7 @@ function App() {
       key: 6,
       name: "Produto 6",
       price: 650.0,
-      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
+      img: "https://cdn.shopify.com/s/files/1/0069/2299/3728/products/TV803_Space_Rocket_Ship_Wooden__6.jpg",
       description: "Descrição do produto 6",
     },
     {
@@ -66,15 +66,8 @@ function App() {
       key: 8,
       name: "Produto 8",
       price: 800.0,
-      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
+      img: "https://i5.walmartimages.com/asr/2b74ae68-bdff-4c04-a2e7-6a548e13c54d.128657b44b007af34f809ef6027fcc25.jpeg",
       description: "Descrição do produto 8",
-    },
-    {
-      key: 9,
-      name: "Produto 9",
-      price: 800.0,
-      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
-      description: "Descrição do produto 9",
     },
   ]);
 
