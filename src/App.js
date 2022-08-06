@@ -1,55 +1,82 @@
-import React, {useState} from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 /*React Icons*/
 
 /*Components*/
-import { AppLogo } from './components/Header/Logo/AppLogo'; //Logo e título do site
-import { SearchInput } from './components/Header/Search/SearchInput'; //Caixa de pesquisa por nome do produto
-import { ProductFilter } from './components/Header/Filter/ProductFilter'; //Filtro de ordenação dos produtos
-import { ProductCardContainer } from './components/Body/ProductCardContainer'; //Container dos cards dos produtos
-import { ShoppingCart } from './components/Footer/Cart/ShoppingCart'; //Botão de compra
+import { AppLogo } from "./components/Header/Logo/AppLogo"; //Logo e título do site
+import { SearchInput } from "./components/Header/Search/SearchInput"; //Caixa de pesquisa por nome do produto
+import { ProductFilter } from "./components/Header/Filter/ProductFilter"; //Filtro de ordenação dos produtos
+import { ProductCardContainer } from "./components/Body/ProductCardContainer"; //Container dos cards dos produtos
+import { ShoppingCart } from "./components/Footer/Cart/ShoppingCart"; //Botão de compra
 
 function App() {
-
   /*Armazena todos os produtos da loja*/
-  const [productsList,setProductsList] = useState([{
-    key: 1,
-    name: 'Produto 1',
-    price: 150,
-    img: 'https://picsum.photos/200/200/?1',
-    description: 'Descrição do produto 1'
-  }, {
-    key: 2,
-    name: 'Produto 2',
-    price: 250.30,
-    img: 'https://picsum.photos/200/200/?2',
-    description: 'Descrição do produto 2'
-  }, {
-    key: 3,
-    name: 'Produto 3',
-    price: 350.50,
-    img: 'https://picsum.photos/200/200/?3',
-    description: 'Descrição do produto 3'
-  }, {
-    key: 4,
-    name: 'Produto 4',
-    price: 450.70,
-    img: 'https://picsum.photos/200/200/?4',
-    description: 'Descrição do produto 4'
-  }, {
-    key: 5,
-    name: 'Produto 5',
-    price: 550.90,
-    img: 'https://picsum.photos/200/200/?5',
-    description: 'Descrição do produto 5'
-  }, {
-    key: 6,
-    name: 'Produto 6',
-    price: 650.00,
-    img: 'https://picsum.photos/200/200/?6',
-    description: 'Descrição do produto 6'
-  }]);
+  const [productsList, setProductsList] = useState([
+    {
+      key: 1,
+      name: "Produto 1",
+      price: 150,
+      img: "https://cf.shopee.com.br/file/9fb957a8376ca8e7fad515293b155f3c",
+      description: "Descrição do produto 1",
+    },
+    {
+      key: 2,
+      name: "Produto 2",
+      price: 250.3,
+      img: "https://images-shoptime.b2w.io/produtos/5243778431/imagens/brinquedo-pato-espacial-robo-musical-com-leds-colorido-astronauta/5243778431_1_large.jpg",
+      description: "Descrição do produto 2",
+    },
+    {
+      key: 3,
+      name: "Produto 3",
+      price: 350.5,
+      img: "https://cf.shopee.com.br/file/51e495e5fb60ebc3f78ef02231cd4925_tn",
+      description: "Descrição do produto 3",
+    },
+    {
+      key: 4,
+      name: "Produto 4",
+      price: 450.7,
+      img: "https://cf.shopee.com.br/file/a1d31d2c8c8ddcc0bc276e3a05fb43e5",
+      description: "Descrição do produto 4",
+    },
+    {
+      key: 5,
+      name: "Produto 5",
+      price: 550.9,
+      img: "https://ae01.alicdn.com/kf/U92202ea16ce441648cf1534c6503f06e2/Foguete-de-madeira-woomax-foguete-de-brinquedo-infantil-esta-o-espacial-brinquedos-de-madeira-foguete-de.jpg_Q90.jpg_.webp",
+      description: "Descrição do produto 5",
+    },
+    {
+      key: 6,
+      name: "Produto 6",
+      price: 650.0,
+      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
+      description: "Descrição do produto 6",
+    },
+    {
+      key: 7,
+      name: "Produto 7",
+      price: 800.0,
+      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
+      description: "Descrição do produto 7",
+    },
+    {
+      key: 8,
+      name: "Produto 8",
+      price: 800.0,
+      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
+      description: "Descrição do produto 8",
+    },
+    {
+      key: 9,
+      name: "Produto 9",
+      price: 800.0,
+      img: "https://www.dhresource.com/0x0/f2/albu/g8/M00/91/48/rBVaVF18Pm6APiQdAALVO_ymJoE091.jpg",
+      description: "Descrição do produto 9",
+    },
+  ]);
 
   /*Armazena os produtos que foram adicionados ao carriniho*/
   const [cartList, setCartList] = useState([]);
@@ -69,29 +96,25 @@ function App() {
       <header className="App-header">
         <AppLogo />
 
-        <SearchInput 
-          query = {query}
-          setQuery = {setQuery}
+        <SearchInput query={query} setQuery={setQuery} />
 
-        />
-
-        <ProductFilter 
+        <ProductFilter
           setProductsList={setProductsList}
-          selectedBrand = {selectedBrand}
-          setSelectedBrand = {setSelectedBrand}
+          selectedBrand={selectedBrand}
+          setSelectedBrand={setSelectedBrand}
           minimo={minimo}
           setMinimo={setMinimo}
           maximo={maximo}
           setMaximo={setMaximo}
-          query = {query}
-          setQuery = {setQuery}
+          query={query}
+          setQuery={setQuery}
         />
       </header>
 
-      <div className="App-body">          
+      <div className="App-body">
         <ProductCardContainer
           productsList={productsList}
-          selectedBrand = {selectedBrand}
+          selectedBrand={selectedBrand}
           cartList={cartList}
           setCartList={setCartList}
           minimo={minimo}
@@ -100,10 +123,10 @@ function App() {
         />
       </div>
 
-      <footer className='App-footer'>
-        <ShoppingCart 
-          cartList={cartList} 
-          setCartList={setCartList} 
+      <footer className="App-footer">
+        <ShoppingCart
+          cartList={cartList}
+          setCartList={setCartList}
           totalPriceCart={totalPriceCart}
           setTotalPriceCart={setTotalPriceCart}
         />
