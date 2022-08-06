@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 
-/*React Icons*/
-
 /*Components*/
 import { AppLogo } from "./components/Header/Logo/AppLogo"; //Logo e título do site
 import { SearchInput } from "./components/Header/Search/SearchInput"; //Caixa de pesquisa por nome do produto

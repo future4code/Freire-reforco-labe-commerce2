@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 
 :root {
   --cor-1: #11151c;
   --cor-2: #212d40;
   --cor-3: #db7093;
-  --cor-4: #0487D9;
-  --cor-5: #2A678C;
-  --cor-6: #73B2D9;
-  --cor-7: #2CBF96;
+  --cor-4: #0487d9;
+  --cor-5: #2a678c;
+  --cor-6: #73b2d9;
+  --cor-7: #2cbf96;
 
-  --sombra-cor: rgba(0, 0, 0, 0.500);
+  --sombra-cor: rgba(0, 0, 0, 0.5);
 
   --borda-1: 10px;
 }
@@ -19,7 +19,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-family: "Kdam Thmor Pro", sans-serif;
 }
 
 .App {
@@ -33,7 +33,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  
+
   text-align: center;
 
   background-color: var(--cor-6);
@@ -104,7 +104,7 @@
 /***************************/
 /*     RESPONSIVENESS      */
 /***************************/
-  
+
 @media screen and (max-width: 479px) {
   .App-header {
     display: grid;
@@ -112,7 +112,7 @@
     grid-template-rows: 1fr 1fr;
     place-items: center;
     column-gap: 0px;
-    height: 100px;  
+    height: 100px;
     padding: 0 15px;
     padding-bottom: 3px;
   }
@@ -123,5 +123,4 @@
 }
 
 @media screen and (max-width: 719px) {
-
 }
